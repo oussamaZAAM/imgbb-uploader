@@ -20,8 +20,8 @@ var storage = multer.diskStorage({
 
 var upload = multer({ storage: storage })
 
-app.use(express.static(__dirname + '/public'));
-app.use('/tmp', express.static('tmp'));
+app.use(express.static(__dirname + '/tmp'));
+app.use('./tmp', express.static('tmp'));
 
 app.post('/api/upload', upload.single('image'), async function (req, res, next) {
     const options = {
