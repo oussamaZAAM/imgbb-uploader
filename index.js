@@ -22,6 +22,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 app.use("/tmp", express.static(path.join(__dirname, "/tmp")));
+
 // app.use(express.static(__dirname + '/tmp'));
 // app.use('./tmp', express.static('tmp'));
 
